@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>Advanced JS</title>
+</head>
+<body>
+</body>
+<script type="application/javascript">
+    var arg1 = 10;
+    var arg2 = 5;
+    function add(arg1,arg2){
+        this.arg1 = arg1;
+        this.arg2 = arg2;
+        var a = 'This is Add function';
+        function add1() {
+            alert(a);
+            return this.arg1+this.arg2;
+        }
+        return add1;
+    }
+    function sub(arg1,arg2){
+        this.arg1 = arg1;
+        this.arg2 = arg2;
+        var a = 'This is Subtract function';
+        function sub1() {
+            alert(a);
+            return this.arg1-this.arg2;
+        }
+        return sub1;
+    }
+    function mul(arg1,arg2){
+        this.arg1 = arg1;
+        this.arg2 = arg2;
+        var a = 'This is Multiplication function';
+        function mul1() {
+            alert(a);
+            return this.arg1*this.arg2;
+        }
+        return mul1;
+    }
+    function div(arg1,arg2){
+        this.arg1 = arg1;
+        this.arg2 = arg2;
+        var a = 'This is Division function';
+        function div1() {
+            alert(a);
+            return this.arg1/this.arg2;
+        }
+        return div1;
+    }
+    var add_res = add(arg1,arg2);
+    alert('Add Function Result is --- '+ add_res());
+    var sub_res = sub(arg1,arg2);
+    alert('Subtract Function Result is --- '+ sub_res());
+    var mul_res = mul(arg1,arg2);
+    alert('Multiplication Function Result is --- '+ mul_res());
+    var div_res = div(arg1,arg2);
+    alert('Division Function Result is --- '+ div_res());
+
+</script>
+</html>
